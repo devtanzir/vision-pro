@@ -118,7 +118,7 @@ function canvas() {
   });
 
   function files(index) {
-    var data = `
+    let data = `
   https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/360/large/0000.jpg
   https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/360/large/0001.jpg
   https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/360/large/0002.jpg
@@ -357,12 +357,12 @@ function canvas() {
   }
 
   function scaleImage(img, ctx) {
-    var canvas = ctx.canvas;
-    var hRatio = canvas.width / img.width;
-    var vRatio = canvas.height / img.height;
-    var ratio = Math.min(hRatio, vRatio);
-    var centerShift_x = (canvas.width - img.width * ratio) / 2;
-    var centerShift_y = (canvas.height - img.height * ratio) / 2;
+    let canvas = ctx.canvas;
+    let hRatio = canvas.width / img.width;
+    let vRatio = canvas.height / img.height;
+    let ratio = Math.min(hRatio, vRatio);
+    let centerShift_x = (canvas.width - img.width * ratio) / 2;
+    let centerShift_y = (canvas.height - img.height * ratio) / 2;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(
       img,
@@ -402,7 +402,7 @@ function canvas1() {
   });
 
   function files(index) {
-    var data = `
+    let data = `
 ../assets/img/Apple vision canvas images/Vision00001.png
 ../assets/img/Apple vision canvas images/Vision00002.png
 ../assets/img/Apple vision canvas images/Vision00003.png
@@ -467,12 +467,12 @@ function canvas1() {
   }
 
   function scaleImage(img, ctx) {
-    var canvas = ctx.canvas;
-    var hRatio = canvas.width / img.width;
-    var vRatio = canvas.height / img.height;
-    var ratio = Math.max(hRatio, vRatio);
-    var centerShift_x = (canvas.width - img.width * ratio) / 2;
-    var centerShift_y = (canvas.height - img.height * ratio) / 2;
+    let canvas = ctx.canvas;
+    let hRatio = canvas.width / img.width;
+    let vRatio = canvas.height / img.height;
+    let ratio = Math.max(hRatio, vRatio);
+    let centerShift_x = (canvas.width - img.width * ratio) / 2;
+    let centerShift_y = (canvas.height - img.height * ratio) / 2;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(
       img,
@@ -498,7 +498,7 @@ function canvas1() {
 }
 canvas1();
 
-var tl3 = gsap.timeline({
+let tl3 = gsap.timeline({
   scrollTrigger: {
     trigger: `#page21`,
     start: `top top`,
@@ -512,7 +512,7 @@ tl3.to("#page21>#troff", {
   opacity: 0,
 });
 
-var tl4 = gsap.timeline({
+let tl4 = gsap.timeline({
   scrollTrigger: {
     trigger: `#page22`,
     start: `top top`,
