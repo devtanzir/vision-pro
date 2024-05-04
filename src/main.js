@@ -441,6 +441,11 @@ function canvas1() {
 
   for (let i = 0; i < frameCount; i++) {
     const img = new Image();
+    img.onload = () => {
+      if (images.every((image) => image.complete)) {
+        render(); // Call render function once all images are loaded
+      }
+    };
     img.src = files(i);
     images.push(img);
   }
